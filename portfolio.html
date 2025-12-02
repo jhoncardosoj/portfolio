@@ -1,0 +1,125 @@
+<!-- Portfólio Profissional Ultra Premium -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio Profissional - Jhon Cardoso</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Framer Motion -->
+    <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+
+    <style>
+        /* Fundo com parallax */
+        body {
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('SUA-FOTO-AQUI.jpg') center/cover no-repeat;
+            opacity: 0.08;
+            z-index: -1;
+            animation: floatBg 20s infinite alternate ease-in-out;
+        }
+        @keyframes floatBg {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        /* Efeito de digitação */
+        .typewriter span {
+            border-right: 2px solid #fff;
+            animation: typing 4s steps(30) infinite alternate, blink 0.7s infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Card 3D */
+        .card-3d {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-3d:hover {
+            transform: rotateX(10deg) rotateY(-10deg) scale(1.05);
+            box-shadow: 0px 20px 40px rgba(255, 215, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+<div class="parallax-bg"></div>
+
+<!-- HEADER -->
+<header class="text-center py-20">
+    <h1 class="text-5xl font-bold mb-4 typewriter"><span>Jhon Cardoso - Desenvolvedor Fullstack</span></h1>
+    <p class="text-lg opacity-80">Criando experiências digitais modernas, rápidas e inesquecíveis.</p>
+</header>
+
+<!-- SUA FOTO -->
+<section class="flex justify-center mt-10">
+    <img src="SUA-FOTO-AQUI.jpg" class="w-48 h-48 rounded-full shadow-2xl border-4 border-yellow-400 animate-pulse" />
+</section>
+
+<!-- SEÇÃO DE PROJETOS (AGORA EM DESTAQUE) -->
+<section class="mt-20 px-8">
+    <h2 class="text-4xl font-bold text-yellow-400 mb-8 text-center">Projetos em Destaque</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+        <!-- Projeto 1 -->
+        <div class="p-6 bg-white/10 rounded-2xl card-3d">
+            <img src="PROJETO1.jpg" class="rounded-xl mb-4" />
+            <h3 class="text-2xl font-semibold">Sistema de Agendamentos</h3>
+            <p class="opacity-80 mt-2">Sistema completo com Flask, login, agenda, painel admin, animações e integração profissional.</p>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="p-6 bg-white/10 rounded-2xl card-3d">
+            <video autoplay muted loop class="rounded-xl mb-4">
+                <source src="VIDEO-PROJETO2.mp4" type="video/mp4">
+            </video>
+            <h3 class="text-2xl font-semibold">Landing Page Animada</h3>
+            <p class="opacity-80 mt-2">Site profissional com framer motion, UI moderna, experiência premium.</p>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="p-6 bg-white/10 rounded-2xl card-3d">
+            <img src="PROJETO3.gif" class="rounded-xl mb-4" />
+            <h3 class="text-2xl font-semibold">E-commerce Completo</h3>
+            <p class="opacity-80 mt-2">Loja virtual com carrinho, pagamento, integração com Correios e dashboard.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section class="mt-32 px-10 text-center">
+    <h2 class="text-4xl font-bold mb-6">Sobre Mim</h2>
+    <p class="max-w-3xl mx-auto opacity-80 text-lg leading-relaxed">
+        Sou desenvolvedor apaixonado por criar soluções modernas e funcionais.
+        Trabalho com foco em qualidade, performance e experiências digitais impactantes.
+    </p>
+</section>
+
+<!-- CONTATO -->
+<section class="mt-20 text-center mb-20">
+    <h2 class="text-3xl font-bold mb-4">Entre em Contato</h2>
+    <p class="opacity-80 mb-6">Vamos criar algo extraordinário juntos.</p>
+    <a href="mailto:SEUEMAIL@AQUI.com" class="bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:scale-110 transition-all">Enviar Email</a>
+</section>
+
+</body>
+</html>
